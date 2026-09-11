@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "hooks": {
+    "subagentStart": [
+      {
+        "type": "command",
+        "matcher": "magi-(melchior|balthasar|casper|thomas)",
+        "bash": "magi hook subagent-start",
+        "powershell": "magi hook subagent-start",
+        "timeoutSec": 10
+      }
+    ],
+    "subagentStop": [
+      {
+        "type": "command",
+        "bash": "magi hook subagent-stop",
+        "powershell": "magi hook subagent-stop",
+        "timeoutSec": 15
+      }
+    ],
+    "preToolUse": [
+      {
+        "type": "command",
+        "matcher": "bash|powershell|view|create|edit|grep|glob",
+        "bash": "magi hook guard-tool-use",
+        "powershell": "magi hook guard-tool-use",
+        "timeoutSec": 5
+      }
+    ],
+    "postToolUse": [
+      {
+        "type": "command",
+        "matcher": "bash|powershell|view|grep|glob",
+        "bash": "magi hook redact-tool-result",
+        "powershell": "magi hook redact-tool-result",
+        "timeoutSec": 5
+      }
+    ]
+  }
+}
