@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      {
+        "type": "command",
+        "bash": "bash ~/.claude/hooks/session-decision-record.sh session-start",
+        "powershell": "bash ~/.claude/hooks/session-decision-record.sh session-start",
+        "timeoutSec": 10
+      }
+    ],
+    "stop": [
+      {
+        "type": "command",
+        "bash": "bash ~/.claude/hooks/session-decision-record.sh stop",
+        "powershell": "bash ~/.claude/hooks/session-decision-record.sh stop",
+        "timeoutSec": 10
+      }
+    ]
+  }
+}
