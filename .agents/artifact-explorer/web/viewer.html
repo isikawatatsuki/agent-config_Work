@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ファイル閲覧 | Artifact Library</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/viewer.css">
+  <script defer src="/vendor/lucide.js"></script>
+  <script defer src="/viewer.js"></script>
+</head>
+<body class="viewer-page">
+  <header class="viewer-toolbar">
+    <a href="/" class="button secondary" id="back-to-list"><i data-lucide="arrow-left"></i>一覧へ戻る</a>
+    <div class="viewer-heading"><h1 id="file-title">読み込み中</h1><p id="file-path"></p></div>
+    <div id="pdf-navigation" hidden>
+      <button id="previous-page" class="icon-button" title="前のページ" aria-label="前のページ" disabled><i data-lucide="chevron-left"></i></button>
+      <span id="page-label"></span>
+      <button id="next-page" class="icon-button" title="次のページ" aria-label="次のページ" disabled><i data-lucide="chevron-right"></i></button>
+    </div>
+    <button id="file-details" class="icon-button" title="ファイル情報" aria-label="ファイル情報" disabled><i data-lucide="info"></i></button>
+    <a id="download" class="icon-button" title="ダウンロード" aria-label="ダウンロード" hidden><i data-lucide="download"></i></a>
+  </header>
+  <main id="file-stage" aria-label="ファイルの内容" aria-busy="true"></main>
+  <dialog id="details-dialog"><div class="dialog-heading"><h2>ファイル情報</h2><button id="close-details" class="icon-button" title="閉じる" aria-label="閉じる"><i data-lucide="x"></i></button></div><dl id="properties"></dl></dialog>
+</body>
+</html>

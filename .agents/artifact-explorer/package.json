@@ -1,0 +1,9 @@
+{
+  "name": "artifact-explorer",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ローカルHTML・PDF資料の管理画面",
+  "devDependencies": {
+    "lucide": "0.468.0"
+  }
+}

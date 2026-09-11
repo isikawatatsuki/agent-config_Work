@@ -1,0 +1,130 @@
+{
+  "$comment": "外部由来Skillの上流追従用マニフェスト。pinned は README.md の出典欄と一致させる。更新を反映したら pinned を新しいコミットSHAへ書き換える。ローカル共通変更: html/show-me/eli5/diagram-design/grilling-viz/paper-detailsのHTML・PDF生成物は、明示指定を優先し、それ以外はワークスペースの.agents/artifacts/<topic>/<YYYY-MM-DD-slug>/へ保存する。上流更新時もこの規約と隔離プレビューの制限説明を保持する。",
+  "skills": [
+    {
+      "name": "show-me",
+      "repo": "humanlayer/skills",
+      "ref": "main",
+      "pinned": "6ab9013a10c28f5046f7f999549cd5328a0b30d7",
+      "paths": ["plugins/show-me/skills/show-me"],
+      "notes": "日本語化・HTML資料向け安全規則追加済み。"
+    },
+    {
+      "name": "hve-code-review",
+      "repo": "microsoft/hve-core",
+      "ref": "main",
+      "pinned": "f97a38c1539028af6bfacff9fbd4855dd4f6255b",
+      "paths": [".github/skills/coding-standards/code-review"],
+      "notes": "単体化・日本語化・安全規則追加済み。"
+    },
+    {
+      "name": "two-axis-code-review",
+      "repo": "mattpocock/skills",
+      "ref": "main",
+      "pinned": "5c89081d4bbeb3d039a42093653f90bb698d780e",
+      "paths": ["skills/engineering/code-review"],
+      "notes": "日本語化・外部取得制限・安全規則追加済み。"
+    },
+    {
+      "name": "grill-with-docs",
+      "repo": "mattpocock/skills",
+      "ref": "main",
+      "pinned": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "paths": [
+        "skills/engineering/grill-with-docs",
+        "skills/productivity/grilling",
+        "skills/engineering/domain-modeling",
+        "docs/engineering/grill-with-docs.md"
+      ],
+      "notes": "3スキルを本体へ統合・日本語化・既存ADR規約対応済み。統合元のいずれかが更新された場合に検出される。"
+    },
+    {
+      "name": "magi-council",
+      "repo": "isikawatatsuki/magi-council-skill",
+      "ref": "main",
+      "pinned": "e3c57abc2cd74f13cde47886d77e6d606961df2f",
+      "paths": [".agents/skills/magi-council"],
+      "notes": "Copilot Custom Agent・Hook対応済み。自作リポジトリのため上流と往復する可能性がある。"
+    },
+    {
+      "name": "diagram-design",
+      "repo": "cathrynlavery/diagram-design",
+      "ref": "main",
+      "pinned": "2724fd2efd8c6737f6fa704fbf5da52d67375497",
+      "paths": ["skills/diagram-design"],
+      "notes": "SKILL.md日本語化済み。ベンダリングコピーを正本とし、上流更新の反映はこちらへ行う。plugin (diagram-design@diagram-design) のみが doctor / export-diagram / import-drawio / import-mermaid / profile の5コマンドを提供するため、この1件のみ plugin を有効のまま残し二重管理を許容する。日本語で使う場合はベンダリング側の diagram-design を指定する。"
+    },
+    {
+      "name": "eli5",
+      "repo": "anthropics/claude-plugins-community",
+      "ref": "main",
+      "pinned": "a727be1c7bd6064419b6f60d71993a19198adc17",
+      "paths": ["eli5/skills/eli5"],
+      "notes": "日本語化済み。ベンダリングコピーを正本とし、plugin (eli5@claude-community) は無効化済み。"
+    },
+    {
+      "name": "documenting-with-sources",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/documenting-with-sources/skills/documenting-with-sources", "LICENSE"],
+      "notes": "日本語化・引用規則の単体化・著作権と外部入力の安全規則追加済み。"
+    },
+    {
+      "name": "explain",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/explain/skills/explain", "LICENSE"],
+      "notes": "日本語化・依頼に応じた粒度調整・安全規則追加済み。"
+    },
+    {
+      "name": "grilling-viz",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/grilling-viz/skills/grilling-viz", "LICENSE"],
+      "notes": "既存の日本語と同梱資産を保持。grilling必須依存を単体化し、保存・回答・外部操作の安全規則を追加。"
+    },
+    {
+      "name": "html",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/html/skills/html", "LICENSE"],
+      "notes": "日本語とデザイン資産を保持。PDF出力はLinux/Windows/macOS共通Python CLIとBash互換入口へ変更。検出・上書き拒否・タイムアウト・テストを追加。上流反映時にローカル実装を保持する。CDN通信制約あり。"
+    },
+    {
+      "name": "ja-text-communication",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/ja-text-communication/skills/ja-text-communication", "LICENSE"],
+      "notes": "日本語本文を保持。常時読み込みを用途別呼び出しに変更し、上位指示と技術要素の原文維持を優先。"
+    },
+    {
+      "name": "paper-details",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/paper-details/skills/paper-details", "LICENSE"],
+      "notes": "日本語化・引用規則の単体化・無許諾全文転載禁止。画像抽出にUTF-8 manifest、pymupdf import、依存案内、dpi検証、PDF解放とテストを追加。Linux/Windows起動手順、上書き・依存承認を明記。"
+    },
+    {
+      "name": "survey",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/survey/skills/survey", "LICENSE"],
+      "notes": "日本語化・引用規則の単体化・委譲不可時の代替手順・外部送信と著作権の安全規則追加済み。"
+    },
+    {
+      "name": "writing-quotation",
+      "repo": "mathbullet/skills",
+      "ref": "main",
+      "pinned": "5ab997fcb8a80da4938bacb0a86cbd568e1018a7",
+      "paths": ["plugins/writing-quotation/skills/writing-quotation", "LICENSE"],
+      "notes": "日本語化・例の自作明示・日付不明時の扱い・著作権と外部入力の安全規則追加済み。"
+    }
+  ]
+}

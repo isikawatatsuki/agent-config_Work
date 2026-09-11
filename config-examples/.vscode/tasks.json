@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Artifact Library: 起動",
+            "type": "process",
+            "command": "python3",
+            "args": ["${workspaceFolder}/.agents/artifact-explorer/launch.py"],
+            "windows": {
+                "command": "py",
+                "args": ["-3", "${workspaceFolder}/.agents/artifact-explorer/launch.py"]
+            },
+            "options": { "cwd": "${workspaceFolder}" },
+            "runOptions": { "runOn": "folderOpen", "instanceLimit": 1 },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "silent",
+                "panel": "dedicated",
+                "showReuseMessage": false
+            },
+            "problemMatcher": {
+                "owner": "artifact-library",
+                "pattern": {
+                    "regexp": "^(.+):(\\d+): (error): (.+)$",
+                    "file": 1,
+                    "line": 2,
+                    "severity": 3,
+                    "message": 4
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "^Artifact Library: 起動開始$",
+                    "endsPattern": "^Artifact Library: (http://|起動済み http://)"
+                }
+            }
+        }
+    ]
+}
