@@ -31,6 +31,7 @@ Skill ごとに独立したディレクトリを作成する。
 | Skill | 用途 | 出典 | 状態 |
 |---|---|---|---|
 | `show-me` | 図やHTML資料による視覚的な説明 | `humanlayer/skills@6ab9013` | 日本語化・安全規則追加済み |
+| `interactive-flow-dashboard` | 実際の処理フローとMR/PR進捗をインタラクティブHTMLで可視化（親Sonnet、HTML実装Haikuを優先） | ワークスペース独自 | 新規追加・下位モデル委譲対応 |
 | `hve-code-review` | 複数観点とリスク深度によるコードレビュー | `microsoft/hve-core@f97a38c` | 単体化・日本語化・安全規則追加済み |
 | `two-axis-code-review` | 規約と仕様の2軸コードレビュー | `mattpocock/skills@5c89081` | 日本語化・外部取得制限・安全規則追加済み |
 | `magi-council` | 3人格の独立評価と決定論的な採決 | `isikawatatsuki/magi-council-skill@e3c57abc2cd74f13cde47886d77e6d606961df2f` | Copilot Custom Agent・Hook対応、監査済み |
